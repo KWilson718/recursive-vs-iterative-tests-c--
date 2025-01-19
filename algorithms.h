@@ -15,7 +15,9 @@ public:
     Algorithms(); // constructor
     
     // Takes in a number to use and sets each variable's time to the updated one, returns a boolean if true
-    void findTimes(long long exponent);    
+    void findTimes(long long exponent);  
+
+    void clearTimes();  
 
 private:
 

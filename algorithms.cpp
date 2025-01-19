@@ -7,6 +7,10 @@ using std::chrono::duration_cast;
 using std::chrono::nanoseconds;
 
 Algorithms::Algorithms() {
+    this->_doubleIterativeTime = 0.0;
+    this->_doubleRecursiveTime = 0.0;
+    this->_integerIterativeTime = 0;
+    this->_integerRecursiveTime = 0;
 }
 
 void Algorithms::findTimes(long long exponent) {
@@ -19,6 +23,13 @@ void Algorithms::findTimes(long long exponent) {
 
     calculateIntegerRecursive(_INTEGER_BASE, exponent);
 
+}
+
+void Algorithms::clearTimes() {
+    this->_doubleIterativeTime = 0.0;
+    this->_doubleRecursiveTime = 0.0;
+    this->_integerIterativeTime = 0;
+    this->_integerRecursiveTime = 0;
 }
 
 void Algorithms::calculateDoubleIterative(long double base, long long exponent) {
