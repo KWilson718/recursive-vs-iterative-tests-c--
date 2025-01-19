@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include "algorithms.h"
+
 using std::cout;
 using std::endl;
 
