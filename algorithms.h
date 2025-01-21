@@ -1,22 +1,35 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+// Algorithm Execution Time Comparison Class
+// By Kyle Wilson
+// 
+// The stated purpose of this class is to compare the execution time of four algorithms
+//  - Each algorithm works to compute a provided base that is then multiplied to the power of a provided exponent
+//  - Four public variables can then be accessed with the execution times for further analysis
+
 #ifndef ALGORITHMS_H
 #define ALGORITHMS_H
 
 class Algorithms {
 
 public:
+    // Constant values provided by assignment
     const long double _DOUBLE_BASE = 2.718281828459045091;
     const long long _INTEGER_BASE = 1000003;
 
+    // Four member variables that can be accessed for analysis
     long long _doubleIterativeTime;
     long long _doubleRecursiveTime;
     long long _integerIterativeTime;
     long long _integerRecursiveTime;
 
-    Algorithms(); // constructor
+    // Constructor
+    Algorithms(); 
     
-    // Takes in a number to use and sets each variable's time to the updated one, returns a boolean if true
+    // Takes in a number to use and sets each variable's time to the updated one
     void findTimes(long long exponent);  
 
+    // Sets each member variable to zero, as to not cause confusion
     void clearTimes();  
 
 private:
